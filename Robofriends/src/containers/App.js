@@ -33,7 +33,7 @@ function App() {
   } else {
     return (<div className='tc'>
       <h1 className='f1'>RoboFriends</h1>
-      <button onClick={()=>setCount(count+1)} >Click ME!</button>
+      {/* <button onClick={()=>setCount(count+1)} >Click ME!</button> */}
       <SearchBox searchChange={onSearchChange} />
       <Scroll>
         <CardList robots={filteredRobots} />
