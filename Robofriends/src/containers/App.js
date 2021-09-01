@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   const [robots, setRobots] = useState([]);
-  const [searchfield, setSearchfield] = useState('');
+  // const [searchfield, setSearchfield] = useState('');
   const [count, setCount] = useState(0);
   
 
@@ -19,15 +19,15 @@ function App() {
     console.log(count);
   },[count])//run only when count changes
 
-  const onSearchChange = (event) => {
-    setSearchfield(event.target.value)
-  }
+  // const onSearchChange = (event) => {
+  //   setSearchfield(event.target.value)
+  // }
 
   const filteredRobots = robots.filter((robot) => {
-    return robot.name.toLowerCase().includes(searchfield.toLowerCase())
+    return robot.name.toLowerCase().includes(searchField.toLowerCase())
   })
 
-  console.log(robots, searchfield);
+  console.log(robots, searchField);
   if (!robots.length) {
    return <h1>Loading</h1>
   } else {
